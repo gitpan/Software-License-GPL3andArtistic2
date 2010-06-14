@@ -1,7 +1,17 @@
 #!perl
+#
+# This file is part of Software-License-GPL3andArtistic2
+#
+# This software is copyright (c) 2010 by Caleb Cushing.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
+use strict;
+use warnings;
 use warnings;
 use strict;
-use Test::More 0.88;
+use Test::More 0.94;
 
 # Include a cut-down version of YAML::Tiny so we don't introduce unnecessary
 # dependencies ourselves.
@@ -406,11 +416,15 @@ BEGIN {
     my %skip = map { $_ => 1 } qw(
       App::FatPacker
       Class::Accessor::Classy
+      Devel::Cover
       Module::Install
       Moose::Role
-      Test::YAML::Meta
+      POE::Loop::Tk
+      Template::Test
+      Test::Kwalitee
       Test::Pod::Coverage
       Test::Portability::Files
+      Test::YAML::Meta
     );
 
     my $Test = Test::Builder->new;

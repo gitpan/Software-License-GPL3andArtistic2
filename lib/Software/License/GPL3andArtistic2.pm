@@ -1,6 +1,16 @@
+#
+# This file is part of Software-License-GPL3andArtistic2
+#
+# This software is copyright (c) 2010 by Caleb Cushing.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
+use strict;
+use warnings;
 package Software::License::GPL3andArtistic2;
 BEGIN {
-  $Software::License::GPL3andArtistic2::VERSION = '0.06';
+  $Software::License::GPL3andArtistic2::VERSION = '0.07';
 }
 use strict;
 use warnings;
@@ -11,7 +21,7 @@ use Software::License::Artistic_2_0;
 
 sub name { 'GNU GPLv3 and Artistic 2.0' }
 sub url  { 'http://www.gnu.org/licenses/gpl-3.0.txt http://www.perlfoundation.org/artistic_license_2_0' }
-sub meta_name { 'gpl3artistic2' }
+sub meta_name { 'open_source' }
 
 sub _gpl {
   my ($self) = @_;
@@ -42,14 +52,14 @@ Software::License::GPL3andArtistic2 - GPL 3 and Artistic 2.0 Dual License
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 NOTICE
 
-This license is probably not needed (IANAL). Artistic 2.0 Licensed Code can be
-used in GPL 3 Code and even Re-Licensed as it. In this L<http://bit.ly/dfBgPn>
-interview on L<http://www.theperlreview.com> Allison Randal states (full URI
-below)
+This license is probably not needed (IANAL) and unmaintained because the
+Artistic 2.0 Licensed Code can be used in GPL 3 Code and even Re-Licensed as
+it. In this L<http://bit.ly/dfBgPn> interview on
+L<http://www.theperlreview.com> Allison Randal states (full URI below)
 
 =over 4
 
@@ -98,7 +108,7 @@ to multilicense
 
 =head1 AUTHOR
 
-  Caleb Cushing <xenoterracide@gmail.com>
+Caleb Cushing <xenoterracide@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

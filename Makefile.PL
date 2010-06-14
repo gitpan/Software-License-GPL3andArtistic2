@@ -13,10 +13,11 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
+    'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Scalar::Util' => '0',
-    'Test::More' => '0.88',
+    'Test::More' => '0.94',
     'perl' => '5.004'
   },
   'CONFIGURE_REQUIRES' => {
@@ -32,7 +33,7 @@ my %WriteMakefileArgs = (
     'Software::License::GPL_3' => '0',
     'parent' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }
@@ -41,10 +42,10 @@ my %WriteMakefileArgs = (
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM}; 
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
   for my $mod ( keys %$br ) {
     if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod}; 
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
     }
     else {
       $pp->{$mod} = $br->{$mod};
